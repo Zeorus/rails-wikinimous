@@ -8,9 +8,16 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   </head>
 
   <body>
+    <header id="header">
+      <div id="wiki"><%= link_to 'Wikinimous', "/" %></div>
+      <div id="new_article"><%= link_to 'New Article', new_article_path %></div>
+    </header>
+
     <%= yield %>
+
   </body>
 </html>

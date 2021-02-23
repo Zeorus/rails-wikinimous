@@ -1,0 +1,12 @@
+<div class="my_container">
+  <div class="article">
+    <div id="article-title" class="d-flex align-items-center">
+      <h2><%= @article.title %></h2>
+      <%= link_to '<i class="icon icon-pencil"></i>'.html_safe, "/articles/#{@article.id}/edit" %>
+      <%= link_to '<i class="icon icon-trash"></i>'.html_safe, article_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <div id="article-content">
+    <%= @article.content %>
+    </div>
+  </div>
+</div>
